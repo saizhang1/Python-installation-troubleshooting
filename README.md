@@ -39,7 +39,8 @@ SSLError(MaxRetryError('HTTPSConnectionPool(host=\'repo.anaconda.com\', port=443
 
 #### Unable to install requests or beautifulsoup in Python 
 
-Since requests and beautiful soup ae packages which allow the python to crawl the websites and you will also need to insert the URL, thee is actually a trust issue. You commonly will get error as follow:
+
+Since requests and beautiful soup ae packages which allow the python to crawl the websites and you will also need to insert the URL, thee is actually a trust and SSL issue. You commonly will get error as follow:
 
 ``` 
   Could not fetch URL https://pypi.org/simple/requests/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/requests/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1056)'))) - skipping
@@ -55,7 +56,7 @@ pypi.org
 files.pythonhosted.org
 
 ```
-pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --user requests
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --user (package name: requests, sqlalchemy...)
 ```
 
 <img width="584" alt="download (1)" src="https://user-images.githubusercontent.com/36822899/64706120-4bf29600-d4b1-11e9-9a4e-74efd9fbb0c8.png">
