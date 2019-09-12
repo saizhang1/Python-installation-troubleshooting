@@ -75,7 +75,7 @@ This is actually a problem when you install the package python.docx.
 
 #### Solution
 
-1. Uninstall docx module with pip uninstall docx
+1. Uninstall docx module with ```pip uninstall docx```
 2. Download  ```python_docx-0.8.10-py2.py3-none-any.whl``` from http://www.lfd.uci.edu/~gohlke/pythonlibs/ (download the last version)
 3. Run ```pip install python_docx-0.8.10-py2.py3-none-any.whl``` to reinstall docx. 
 
