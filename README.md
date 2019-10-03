@@ -79,3 +79,34 @@ This is actually a problem when you install the package python.docx.
 2. Download  ```python_docx-0.8.10-py2.py3-none-any.whl``` from http://www.lfd.uci.edu/~gohlke/pythonlibs/ (download the last version)
 3. Run ```pip install python_docx-0.8.10-py2.py3-none-any.whl``` to reinstall docx. 
 
+# Issue 5
+
+#### Cannot install MySQLdb
+
+```
+ERROR: Could not find a version that satisfies the requirement MySQLdb (from versions: none)
+ERROR: No matching distribution found for MySQLdb
+```
+
+Firstly, you should understand that MySQLdb is only for Python 2 versions, is not supporting by Python 3. In this case, if you are using Python 3+ you will not able to install this package.
+
+#### Solution
+
+This gives to you two alternatives, mysqlclient and mysql-connect-python, The first one requires compilation from extensions for the plugin and, in Windows, this implies VStudio Libraries and a know-how for compile native extensions.
+
+mysql-connect-python is not compiled (and i don't recommend this for production, maybe only for dev) so you are going to need to install this.
+
+You can try:
+
+```
+pip3 install mysql-connect-python
+```
+or 
+```
+pip3 install http://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.4.zip
+```
+
+Or 
+```
+pip install mysql-client
+```
